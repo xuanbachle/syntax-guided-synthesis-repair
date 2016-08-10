@@ -1,0 +1,14 @@
+;(define-fun f ((x Int) (y Int)) Bool (or (and (> y 1) (>= y true)) (not false)))
+;(define-fun f_11-7-11-11 (BOUND_VAR_LIST b a) (TYPE_CONSTANT Boolean type) ((BUILTIN LEQ) b a))
+;(define-fun f_15-14-15-19 ((y2 Int) (y1 Int)) Int
+;    (- y2 1))
+;(define-fun f_12-7-12-7 (BOUND_VAR_LIST b a) (TYPE_CONSTANT Boolean type) ((BUILTIN LEQ) b ((BUILTIN MINUS) a (CONST_RATIONAL 1))))
+;(define-fun f_13-14-13-19 (BOUND_VAR_LIST y2 y1) (TYPE_CONSTANT integer type) ((BUILTIN PLUS) y2 y2))
+;(define-fun f_16-14-16-19 (BOUND_VAR_LIST y2 y1) (TYPE_CONSTANT integer type) ((BUILTIN MINUS) y2 y1))
+;(define-fun f_12-7-12-7 ((y2 Int) (y1 Int)) Int
+;    6)
+;(define-fun f_12-7-12-7_2 ((y2 Int) (y1 Int)) Int
+;    (- y1 y2))
+(define-fun f_21-13-21-13 (BOUND_VAR_LIST num1 num3 num2 big) (TYPE_CONSTANT integer type) (CONST_RATIONAL 1))
+(define-fun f_11-10-11-14 (BOUND_VAR_LIST b a) (TYPE_CONSTANT Boolean type) ((BUILTIN LEQ) b (CONST_RATIONAL 1)))
+;(assert (and (= x 1) (< y 2)))

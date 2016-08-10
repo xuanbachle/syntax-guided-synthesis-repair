@@ -1,0 +1,55 @@
+(set-logic  LIA)
+(
+synth-fun f_12-7-12-7 ((b Int) (a Int)) Bool
+	(
+		(Start  Bool (
+		true  false
+		(<= IntExpr  IntExpr)
+		(=  IntExpr  IntExpr)
+		;(!=  IntExpr  IntExpr)
+		(and  Start  Start)
+		(or Start  Start)
+		(not  Start )
+		))
+		(IntExpr  Int (
+		b a
+		0 1
+		(+  IntExpr  IntExpr)
+		(- IntExpr  IntExpr )
+		))
+	)
+)
+
+(
+synth-fun f_12-7-12-7_2 ((b Int) (a Int)) Bool
+	(
+		(Start  Bool (
+		true  false
+		(<= IntExpr  IntExpr)
+		(=  IntExpr  IntExpr)
+		;(!=  IntExpr  IntExpr)
+		(and  Start  Start)
+		(or Start  Start)
+		(not  Start )
+		))
+		(IntExpr  Int (
+		b a
+		0 1
+		(+  IntExpr  IntExpr)
+		(- IntExpr  IntExpr )
+		))
+	)
+)
+(declare-var b Int)
+(declare-var a Int)
+
+(constraint (=> (and  (= b 2) (= a 2)) (= (f_12-7-12-7 b a) false)))
+(constraint (=> (and  (= b 2) (= a 3)) (= (f_12-7-12-7 b a) true)))
+(constraint (=> (and  (= b 2) (= a 1)) (= (f_12-7-12-7 b a) false)))
+(constraint (=> (and  (= b 3) (= a 1)) (= (f_12-7-12-7 b a) false)))
+
+;(constraint (=> (and (and (= cond false) (= b 2)) (= a 3)) (= (f_12-7-12-7 cond b a) false)))
+;(constraint (=> (and (and (= cond false) (= b 2)) (= a 1)) (= (f_12-7-12-7 cond b a) false)))
+;(constraint )
+
+(check-synth)
