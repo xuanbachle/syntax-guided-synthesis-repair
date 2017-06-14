@@ -1,0 +1,2 @@
+(define-fun f_17-11-17-84 (BOUND_VAR_LIST int2 int1 int3) (TYPE_CONSTANT Boolean type) ((BUILTIN LEQ) int2 int2))
+(define-fun f_15-6-15-77 (BOUND_VAR_LIST int2 int1 int3) (TYPE_CONSTANT Boolean type) ((BUILTIN LEQ) int2 (CONST_RATIONAL 2)))

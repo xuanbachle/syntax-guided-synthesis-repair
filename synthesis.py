@@ -8,11 +8,12 @@ from pprint import pprint
 import tempfile
 import shutil
 from os.path import join
+import statistics
 import time
 
+
 logger = logging.getLogger(__name__)
-#src/ distance.c oracle 1 2 3 --assert assert.json --verbose --initial-tests 1
-#/home/dxble/workspace/repairtools/angelix/tests/distance
+
 
 class Synthesizer:
 
@@ -78,58 +79,66 @@ class Synthesizer:
                     "repairIntegerConst": False,
                     "level": "linear"
                 },
-                "simplification": self.config['synthesis_simplify'],
+                "simplification": False,
                 "reuseStructure": not self.config['semfix'],
-                "spaceReduction": self.config['space_reduction'],
+                "spaceReduction": True,
                 "componentLevel": level,
                 "solverBound": 3,
-                "solverTimeout": self.config['synthesis_timeout'],
+                "solverTimeout": self.config['synthesis_timeout']
             }
 
             with open(config_file, 'w') as file:
                 json.dump(config, file)
 
-            if self.config['synthesis_other_solver'] is None:
-                jar = os.environ['SYNTHESIS_JAR']
+            if self.config['use_nsynth']:
+                jar = os.environ['NSYNTH_JAR']
             else:
-                jar = os.environ['SYNTHESIS_OTHER_JAR']
+                if self.config['synthesis_other_solver'] is None:
+                    jar = os.environ['SYNTHESIS_JAR']
+                else:
+                    jar = os.environ['SYNTHESIS_OTHER_JAR']
+
 
             if self.config['verbose']:
                 stderr = None
             else:
                 stderr = subprocess.DEVNULL
 
-
             args = [self.angelic_forest_file, self.extracted, patch_file, config_file]
+            shutil.copyfile(config_file, "/angelix/config.json")
             if self.config['synthesis_other_solver'] is not None:
-                solverName = self.config['synthesis_other_solver']
-                args += [solverName]
-                if solverName == "Enum":
-                    args += [os.environ['ENUM_SOLVER_PATH']]
-                elif solverName == "Symbolic":
-                    args += [os.environ['SYMBOLIC_SOLVER_PATH']]
-                elif solverName == "CVC4":
-                    args += [os.environ['CVC4_SOLVER_PATH']]
-                elif solverName == "Stoc":
-                    args += [os.environ['STOC_SOLVER_PATH']]
-                else:
-                    raise NameError("Not supported solver: "+solverName)
-                args += [os.environ["RESULT_BEAUTIFIER_PATH"]]
-
-            logger.info(self.angelic_forest_file)
-            logger.info(self.extracted)
-            logger.info(patch_file)
-            logger.info(config_file)
+                 solverName = self.config['synthesis_other_solver']
+                 args += [solverName]
+                 if solverName == "Enum":
+                     args += [os.environ['ENUM_SOLVER_PATH']]
+                 elif solverName == "Symbolic":
+                     args += [os.environ['SYMBOLIC_SOLVER_PATH']]
+                 elif solverName == "CVC4":
+                     args += [os.environ['CVC4_SOLVER_PATH']]
+                 elif solverName == "Stoc":
+                     args += [os.environ['STOC_SOLVER_PATH']]
+                 else:
+                     raise NameError("Not supported solver: "+solverName)
+                 args += [os.environ["RESULT_BEAUTIFIER_PATH"]]
+                 args += ["/angelix/additionalConfig.txt"]            
+            synthesis_start_time = time.time()
+            logger.info("-------")
+            logger.info(args)            
             try:
-                start = time.time()
                 result = subprocess.check_output(['java', '-jar', jar] + args, stderr=stderr)
-                end = time.time()
-                logger.info ("Synthesis time: {}".format(end - start))
             except subprocess.CalledProcessError:
                 logger.warning("synthesis returned non-zero code")
-                if self.config['term_when_syn_crashes']:
-                    sys.exit()
                 continue
+            finally:
+                synthesis_end_time = time.time()
+                synthesis_elapsed = synthesis_end_time - synthesis_start_time
+                statistics.data['time']['synthesis'] += synthesis_elapsed
+                iter_stat = dict()
+                iter_stat['tests'] = len(angelic_forest)
+                iter_stat['level'] = level
+                iter_stat['time'] = synthesis_elapsed
+                statistics.data['iterations']['synthesis'].append(iter_stat)
+                statistics.save()
 
             if str(result, 'UTF-8').strip() == 'TIMEOUT':
                 logger.warning('timeout when synthesizing fix')
@@ -144,13 +153,18 @@ class Synthesizer:
                     if len(line) == 0:
                         continue
                     expr = tuple(map(int, line.strip().split('-')))
-                    original = content.pop(0).strip()
-                    fixed = content.pop(0).strip()
+                    def convert_to_c(s):
+                        return s.replace('_LBRSQR_', '[').replace('_RBRSQR_', ']')
+                    original = convert_to_c(content.pop(0).strip())
+                    fixed = convert_to_c(content.pop(0).strip())
                     if self.config['semfix']:
                         logger.info('synthesized expression {}: {}'.format(expr, fixed))
                     else:
                         logger.info('fixing expression {}: {} ---> {}'.format(expr, original, fixed))
                     patch[expr] = fixed
+                if len(patch) == 0:
+                    logger.warn('patch contains no changes')
+                    return None
                 return patch
             else:
                 raise Exception('result: ' + str(result, 'UTF-8'))

@@ -1,0 +1,706 @@
+../stochpp/include/nonstd/io.hpp: 22. Done initializing streams.
+../stochpp/main.cpp: 22. stoch. Jun 14 2016. 03:01:04. 
+../stochpp/include/nonstd/io.hpp: 40. Echoing /home/dxble/workspace/repairtools/angelix/src/af2sygus/myout_median-h45-012.sygus.
+
+(set-logic  LIA)
+(
+synth-fun f_17-11-17-84 ( (int2 Int) (int1 Int) (int3 Int)) Bool
+	((Start Bool (
+(or Or1 Or1)
+))
+(Or1 Bool (
+(and And1 And1)
+))
+(And1 Bool(
+(<= IntExpr IntExpr)
+(>= IntExpr IntExpr)
+))
+(IntExpr Int (
+int2 int1 int3
+))
+
+	)
+)(
+synth-fun f_15-6-15-77 ( (int2 Int) (int1 Int) (int3 Int)) Bool
+	((Start Bool (
+(or Or1 Or1)
+))
+(Or1 Bool (
+(and And1 And1)
+))
+(And1 Bool(
+(<= IntExpr IntExpr)
+(>= IntExpr IntExpr)
+))
+(IntExpr Int (
+int2 int1 int3
+))
+
+	)
+)
+(declare-var int2_17-11-17-84 Int)
+(declare-var int1_17-11-17-84 Int)
+(declare-var int3_17-11-17-84 Int)
+(declare-var int2_15-6-15-77 Int)
+(declare-var int1_15-6-15-77 Int)
+(declare-var int3_15-6-15-77 Int)
+
+(constraint   (and (=>  (and (= int1_15-6-15-77 8)  (and (= int3_15-6-15-77 2) (= int2_15-6-15-77 6)) )  (= (f_15-6-15-77 int2_15-6-15-77 int1_15-6-15-77 int3_15-6-15-77 ) false)) (=>  (and (= int1_17-11-17-84 8)  (and (= int3_17-11-17-84 2) (= int2_17-11-17-84 6)) )  (= (f_17-11-17-84 int2_17-11-17-84 int1_17-11-17-84 int3_17-11-17-84 ) true))) )
+(constraint  (=>  (and (= int1_15-6-15-77 6)  (and (= int3_15-6-15-77 8) (= int2_15-6-15-77 2)) )  (= (f_15-6-15-77 int2_15-6-15-77 int1_15-6-15-77 int3_15-6-15-77 ) true)))
+(constraint   (and (=>  (and (= int1_15-6-15-77 2)  (and (= int3_15-6-15-77 8) (= int2_15-6-15-77 6)) )  (= (f_15-6-15-77 int2_15-6-15-77 int1_15-6-15-77 int3_15-6-15-77 ) false)) (=>  (and (= int1_17-11-17-84 2)  (and (= int3_17-11-17-84 8) (= int2_17-11-17-84 6)) )  (= (f_17-11-17-84 int2_17-11-17-84 int1_17-11-17-84 int3_17-11-17-84 ) true))) )
+
+
+;(constraint (not (= (f_17-11-17-84 int2_17-11-17-84 int1_17-11-17-84 int3_17-11-17-84 ) (<= int2_17-11-17-84 int2_17-11-17-84))));NOT_WANTED
+
+;(constraint (not (= (f_15-6-15-77 int2_15-6-15-77 int1_15-6-15-77 int3_15-6-15-77 ) (or (and (<= int2_15-6-15-77 int1_15-6-15-77) (<= int2_15-6-15-77 int3_15-6-15-77)) (and (<= int2_15-6-15-77 int1_15-6-15-77) (<= int2_15-6-15-77 int3_15-6-15-77)) ))));NOT_WANTED
+(constraint (= (f_17-11-17-84 int2_15-6-15-77 int1_15-6-15-77 int3_15-6-15-77 ) (or (and (<= int2_15-6-15-77 int1_15-6-15-77) (<= int2_15-6-15-77 int3_15-6-15-77)) (and (<= int2_15-6-15-77 int1_15-6-15-77) (<= int2_15-6-15-77 int3_15-6-15-77)) )));NOT_WANTED
+
+(check-synth)
+../stochpp/include/nonstd/io.hpp: 46. Echoing input done.
+../stochpp/include/parser_iface/synth_fun_cmd.hpp: 148. At line 20, column 1. Grammar unrolled.
+Start: b3
+a0 {
+a0 ::= x0. . . .
+a0 ::= x1. . . .
+a0 ::= x2. . . .
+} a0;
+a1 {
+a1 ::= x0. . . .
+a1 ::= x1. . . .
+a1 ::= x2. . . .
+} a1;
+a2 {
+a2 ::= x0. . . .
+a2 ::= x1. . . .
+a2 ::= x2. . . .
+} a2;
+a3 {
+a3 ::= x0. . . .
+a3 ::= x1. . . .
+a3 ::= x2. . . .
+} a3;
+a4 {
+a4 ::= x0. . . .
+a4 ::= x1. . . .
+a4 ::= x2. . . .
+} a4;
+a5 {
+a5 ::= x0. . . .
+a5 ::= x1. . . .
+a5 ::= x2. . . .
+} a5;
+a6 {
+a6 ::= x0. . . .
+a6 ::= x1. . . .
+a6 ::= x2. . . .
+} a6;
+a7 {
+a7 ::= x0. . . .
+a7 ::= x1. . . .
+a7 ::= x2. . . .
+} a7;
+b0 {
+b0 ::= (or (fb0) (fb1)). . b8 b8 . .
+} b0;
+b1 {
+b1 ::= (or (fb0) (fb1)). . b9 b9 . .
+} b1;
+b2 {
+b2 ::= (or (fb0) (fb1)). . b10 b10 . .
+} b2;
+b3 {
+b3 ::= (or (fb0) (fb1)). . b11 b11 . .
+} b3;
+b4 {
+b4 ::= (or (fb0) (fb1)). . b12 b12 . .
+} b4;
+b5 {
+b5 ::= (or (fb0) (fb1)). . b13 b13 . .
+} b5;
+b6 {
+b6 ::= (or (fb0) (fb1)). . b14 b14 . .
+} b6;
+b7 {
+b7 ::= (or (fb0) (fb1)). . b15 b15 . .
+} b7;
+b8 {
+b8 ::= (and (fb0) (fb1)). . b16 b16 . .
+} b8;
+b9 {
+b9 ::= (and (fb0) (fb1)). . b17 b17 . .
+} b9;
+b10 {
+b10 ::= (and (fb0) (fb1)). . b18 b18 . .
+} b10;
+b11 {
+b11 ::= (and (fb0) (fb1)). . b19 b19 . .
+} b11;
+b12 {
+b12 ::= (and (fb0) (fb1)). . b20 b20 . .
+} b12;
+b13 {
+b13 ::= (and (fb0) (fb1)). . b21 b21 . .
+} b13;
+b14 {
+b14 ::= (and (fb0) (fb1)). . b22 b22 . .
+} b14;
+b15 {
+b15 ::= (and (fb0) (fb1)). . b23 b23 . .
+} b15;
+b16 {
+b16 ::= (<= (fz0) (fz1)). a0 a0 . . .
+b16 ::= (>= (fz0) (fz1)). a0 a0 . . .
+} b16;
+b17 {
+b17 ::= (<= (fz0) (fz1)). a1 a1 . . .
+b17 ::= (>= (fz0) (fz1)). a1 a1 . . .
+} b17;
+b18 {
+b18 ::= (<= (fz0) (fz1)). a2 a2 . . .
+b18 ::= (>= (fz0) (fz1)). a2 a2 . . .
+} b18;
+b19 {
+b19 ::= (<= (fz0) (fz1)). a3 a3 . . .
+b19 ::= (>= (fz0) (fz1)). a3 a3 . . .
+} b19;
+b20 {
+b20 ::= (<= (fz0) (fz1)). a4 a4 . . .
+b20 ::= (>= (fz0) (fz1)). a4 a4 . . .
+} b20;
+b21 {
+b21 ::= (<= (fz0) (fz1)). a5 a5 . . .
+b21 ::= (>= (fz0) (fz1)). a5 a5 . . .
+} b21;
+b22 {
+b22 ::= (<= (fz0) (fz1)). a6 a6 . . .
+b22 ::= (>= (fz0) (fz1)). a6 a6 . . .
+} b22;
+b23 {
+b23 ::= (<= (fz0) (fz1)). a7 a7 . . .
+b23 ::= (>= (fz0) (fz1)). a7 a7 . . .
+} b23;
+../stochpp/include/parser_iface/synth_fun_cmd.hpp: 148. At line 37, column 1. Grammar unrolled.
+Start: b3
+a0 {
+a0 ::= x0. . . .
+a0 ::= x1. . . .
+a0 ::= x2. . . .
+} a0;
+a1 {
+a1 ::= x0. . . .
+a1 ::= x1. . . .
+a1 ::= x2. . . .
+} a1;
+a2 {
+a2 ::= x0. . . .
+a2 ::= x1. . . .
+a2 ::= x2. . . .
+} a2;
+a3 {
+a3 ::= x0. . . .
+a3 ::= x1. . . .
+a3 ::= x2. . . .
+} a3;
+a4 {
+a4 ::= x0. . . .
+a4 ::= x1. . . .
+a4 ::= x2. . . .
+} a4;
+a5 {
+a5 ::= x0. . . .
+a5 ::= x1. . . .
+a5 ::= x2. . . .
+} a5;
+a6 {
+a6 ::= x0. . . .
+a6 ::= x1. . . .
+a6 ::= x2. . . .
+} a6;
+a7 {
+a7 ::= x0. . . .
+a7 ::= x1. . . .
+a7 ::= x2. . . .
+} a7;
+b0 {
+b0 ::= (or (fb0) (fb1)). . b8 b8 . .
+} b0;
+b1 {
+b1 ::= (or (fb0) (fb1)). . b9 b9 . .
+} b1;
+b2 {
+b2 ::= (or (fb0) (fb1)). . b10 b10 . .
+} b2;
+b3 {
+b3 ::= (or (fb0) (fb1)). . b11 b11 . .
+} b3;
+b4 {
+b4 ::= (or (fb0) (fb1)). . b12 b12 . .
+} b4;
+b5 {
+b5 ::= (or (fb0) (fb1)). . b13 b13 . .
+} b5;
+b6 {
+b6 ::= (or (fb0) (fb1)). . b14 b14 . .
+} b6;
+b7 {
+b7 ::= (or (fb0) (fb1)). . b15 b15 . .
+} b7;
+b8 {
+b8 ::= (and (fb0) (fb1)). . b16 b16 . .
+} b8;
+b9 {
+b9 ::= (and (fb0) (fb1)). . b17 b17 . .
+} b9;
+b10 {
+b10 ::= (and (fb0) (fb1)). . b18 b18 . .
+} b10;
+b11 {
+b11 ::= (and (fb0) (fb1)). . b19 b19 . .
+} b11;
+b12 {
+b12 ::= (and (fb0) (fb1)). . b20 b20 . .
+} b12;
+b13 {
+b13 ::= (and (fb0) (fb1)). . b21 b21 . .
+} b13;
+b14 {
+b14 ::= (and (fb0) (fb1)). . b22 b22 . .
+} b14;
+b15 {
+b15 ::= (and (fb0) (fb1)). . b23 b23 . .
+} b15;
+b16 {
+b16 ::= (<= (fz0) (fz1)). a0 a0 . . .
+b16 ::= (>= (fz0) (fz1)). a0 a0 . . .
+} b16;
+b17 {
+b17 ::= (<= (fz0) (fz1)). a1 a1 . . .
+b17 ::= (>= (fz0) (fz1)). a1 a1 . . .
+} b17;
+b18 {
+b18 ::= (<= (fz0) (fz1)). a2 a2 . . .
+b18 ::= (>= (fz0) (fz1)). a2 a2 . . .
+} b18;
+b19 {
+b19 ::= (<= (fz0) (fz1)). a3 a3 . . .
+b19 ::= (>= (fz0) (fz1)). a3 a3 . . .
+} b19;
+b20 {
+b20 ::= (<= (fz0) (fz1)). a4 a4 . . .
+b20 ::= (>= (fz0) (fz1)). a4 a4 . . .
+} b20;
+b21 {
+b21 ::= (<= (fz0) (fz1)). a5 a5 . . .
+b21 ::= (>= (fz0) (fz1)). a5 a5 . . .
+} b21;
+b22 {
+b22 ::= (<= (fz0) (fz1)). a6 a6 . . .
+b22 ::= (>= (fz0) (fz1)). a6 a6 . . .
+} b22;
+b23 {
+b23 ::= (<= (fz0) (fz1)). a7 a7 . . .
+b23 ::= (>= (fz0) (fz1)). a7 a7 . . .
+} b23;
+../stochpp/include/parser_iface/var_decl_cmd.hpp: 39. At line 38, column 34. Variable int2_17-11-17-84 assigned identifier 0
+../stochpp/include/parser_iface/var_decl_cmd.hpp: 39. At line 39, column 34. Variable int1_17-11-17-84 assigned identifier 1
+../stochpp/include/parser_iface/var_decl_cmd.hpp: 39. At line 40, column 34. Variable int3_17-11-17-84 assigned identifier 2
+../stochpp/include/parser_iface/var_decl_cmd.hpp: 39. At line 41, column 33. Variable int2_15-6-15-77 assigned identifier 3
+../stochpp/include/parser_iface/var_decl_cmd.hpp: 39. At line 42, column 33. Variable int1_15-6-15-77 assigned identifier 4
+../stochpp/include/parser_iface/var_decl_cmd.hpp: 39. At line 43, column 33. Variable int3_15-6-15-77 assigned identifier 5
+../stochpp/include/parser_iface/constraint_cmd.hpp: 19. At line 45, column 349. Adding constraint: (and (or (not (and (= x4 8) (and (= x5 2) (= x3 6)))) (= (fb1 x3 x4 x5) 0)) (or (not (and (= x1 8) (and (= x2 2) (= x0 6)))) (= (fb0 x0 x1 x2) 1)))
+../stochpp/include/parser_iface/constraint_cmd.hpp: 19. At line 46, column 173. Adding constraint: (or (not (and (= x4 6) (and (= x5 8) (= x3 2)))) (= (fb1 x3 x4 x5) 1))
+../stochpp/include/parser_iface/constraint_cmd.hpp: 19. At line 47, column 349. Adding constraint: (and (or (not (and (= x4 2) (and (= x5 8) (= x3 6)))) (= (fb1 x3 x4 x5) 0)) (or (not (and (= x1 2) (and (= x2 8) (= x0 6)))) (= (fb0 x0 x1 x2) 1)))
+../stochpp/include/parser_iface/constraint_cmd.hpp: 19. At line 53, column 247. Adding constraint: (= (fb0 x3 x4 x5) (or (and (<= x3 x4) (<= x3 x5)) (and (<= x3 x4) (<= x3 x5))))
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 12. At line 55, column 13. random-seed: 1902053211
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 13. At line 55, column 13. expr-size: 0
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 14. At line 55, column 13. samples: 100
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 15. At line 55, column 13. mutation-limit: 18446744073709551615
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 16. At line 55, column 13. beta: 0.5
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 17. At line 55, column 13. move-probability: 0.01
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 19. At line 55, column 13. constraint: (and (and (and (and 1 (and (or (not (and (= x4 8) (and (= x5 2) (= x3 6)))) (= (fb1 x3 x4 x5) 0)) (or (not (and (= x1 8) (and (= x2 2) (= x0 6)))) (= (fb0 x0 x1 x2) 1)))) (or (not (and (= x4 6) (and (= x5 8) (= x3 2)))) (= (fb1 x3 x4 x5) 1))) (and (or (not (and (= x4 2) (and (= x5 8) (= x3 6)))) (= (fb1 x3 x4 x5) 0)) (or (not (and (= x1 2) (and (= x2 8) (= x0 6)))) (= (fb0 x0 x1 x2) 1)))) (= (fb0 x3 x4 x5) (or (and (<= x3 x4) (<= x3 x5)) (and (<= x3 x4) (<= x3 x5)))))
+../stochpp/include/parser_iface/check_synth_cmd.hpp: 25. At line 55, column 13. Starting sizefree search.
+../stochpp/include/search/sizefree.hpp: 25. Printing combined grammar!
+Start: a0
+a0 {
+a0 ::= x0. . . .
+a0 ::= x1. . . .
+a0 ::= x2. . . .
+} a0;
+a1 {
+a1 ::= x0. . . .
+a1 ::= x1. . . .
+a1 ::= x2. . . .
+} a1;
+a2 {
+a2 ::= x0. . . .
+a2 ::= x1. . . .
+a2 ::= x2. . . .
+} a2;
+a3 {
+a3 ::= x0. . . .
+a3 ::= x1. . . .
+a3 ::= x2. . . .
+} a3;
+a4 {
+a4 ::= x0. . . .
+a4 ::= x1. . . .
+a4 ::= x2. . . .
+} a4;
+a5 {
+a5 ::= x0. . . .
+a5 ::= x1. . . .
+a5 ::= x2. . . .
+} a5;
+a6 {
+a6 ::= x0. . . .
+a6 ::= x1. . . .
+a6 ::= x2. . . .
+} a6;
+a7 {
+a7 ::= x0. . . .
+a7 ::= x1. . . .
+a7 ::= x2. . . .
+} a7;
+a8 {
+a8 ::= x0. . . .
+a8 ::= x1. . . .
+a8 ::= x2. . . .
+} a8;
+a9 {
+a9 ::= x0. . . .
+a9 ::= x1. . . .
+a9 ::= x2. . . .
+} a9;
+a10 {
+a10 ::= x0. . . .
+a10 ::= x1. . . .
+a10 ::= x2. . . .
+} a10;
+a11 {
+a11 ::= x0. . . .
+a11 ::= x1. . . .
+a11 ::= x2. . . .
+} a11;
+a12 {
+a12 ::= x0. . . .
+a12 ::= x1. . . .
+a12 ::= x2. . . .
+} a12;
+a13 {
+a13 ::= x0. . . .
+a13 ::= x1. . . .
+a13 ::= x2. . . .
+} a13;
+a14 {
+a14 ::= x0. . . .
+a14 ::= x1. . . .
+a14 ::= x2. . . .
+} a14;
+a15 {
+a15 ::= x0. . . .
+a15 ::= x1. . . .
+a15 ::= x2. . . .
+} a15;
+a16 {
+a16 ::= 0. . b3 b27 . .
+} a16;
+b0 {
+b0 ::= (or (fb0) (fb1)). . b8 b8 . .
+} b0;
+b1 {
+b1 ::= (or (fb0) (fb1)). . b9 b9 . .
+} b1;
+b2 {
+b2 ::= (or (fb0) (fb1)). . b10 b10 . .
+} b2;
+b3 {
+b3 ::= (or (fb0) (fb1)). . b11 b11 . .
+} b3;
+b4 {
+b4 ::= (or (fb0) (fb1)). . b12 b12 . .
+} b4;
+b5 {
+b5 ::= (or (fb0) (fb1)). . b13 b13 . .
+} b5;
+b6 {
+b6 ::= (or (fb0) (fb1)). . b14 b14 . .
+} b6;
+b7 {
+b7 ::= (or (fb0) (fb1)). . b15 b15 . .
+} b7;
+b8 {
+b8 ::= (and (fb0) (fb1)). . b16 b16 . .
+} b8;
+b9 {
+b9 ::= (and (fb0) (fb1)). . b17 b17 . .
+} b9;
+b10 {
+b10 ::= (and (fb0) (fb1)). . b18 b18 . .
+} b10;
+b11 {
+b11 ::= (and (fb0) (fb1)). . b19 b19 . .
+} b11;
+b12 {
+b12 ::= (and (fb0) (fb1)). . b20 b20 . .
+} b12;
+b13 {
+b13 ::= (and (fb0) (fb1)). . b21 b21 . .
+} b13;
+b14 {
+b14 ::= (and (fb0) (fb1)). . b22 b22 . .
+} b14;
+b15 {
+b15 ::= (and (fb0) (fb1)). . b23 b23 . .
+} b15;
+b16 {
+b16 ::= (<= (fz0) (fz1)). a0 a0 . . .
+b16 ::= (>= (fz0) (fz1)). a0 a0 . . .
+} b16;
+b17 {
+b17 ::= (<= (fz0) (fz1)). a1 a1 . . .
+b17 ::= (>= (fz0) (fz1)). a1 a1 . . .
+} b17;
+b18 {
+b18 ::= (<= (fz0) (fz1)). a2 a2 . . .
+b18 ::= (>= (fz0) (fz1)). a2 a2 . . .
+} b18;
+b19 {
+b19 ::= (<= (fz0) (fz1)). a3 a3 . . .
+b19 ::= (>= (fz0) (fz1)). a3 a3 . . .
+} b19;
+b20 {
+b20 ::= (<= (fz0) (fz1)). a4 a4 . . .
+b20 ::= (>= (fz0) (fz1)). a4 a4 . . .
+} b20;
+b21 {
+b21 ::= (<= (fz0) (fz1)). a5 a5 . . .
+b21 ::= (>= (fz0) (fz1)). a5 a5 . . .
+} b21;
+b22 {
+b22 ::= (<= (fz0) (fz1)). a6 a6 . . .
+b22 ::= (>= (fz0) (fz1)). a6 a6 . . .
+} b22;
+b23 {
+b23 ::= (<= (fz0) (fz1)). a7 a7 . . .
+b23 ::= (>= (fz0) (fz1)). a7 a7 . . .
+} b23;
+b24 {
+b24 ::= (or (fb0) (fb1)). . b32 b32 . .
+} b24;
+b25 {
+b25 ::= (or (fb0) (fb1)). . b33 b33 . .
+} b25;
+b26 {
+b26 ::= (or (fb0) (fb1)). . b34 b34 . .
+} b26;
+b27 {
+b27 ::= (or (fb0) (fb1)). . b35 b35 . .
+} b27;
+b28 {
+b28 ::= (or (fb0) (fb1)). . b36 b36 . .
+} b28;
+b29 {
+b29 ::= (or (fb0) (fb1)). . b37 b37 . .
+} b29;
+b30 {
+b30 ::= (or (fb0) (fb1)). . b38 b38 . .
+} b30;
+b31 {
+b31 ::= (or (fb0) (fb1)). . b39 b39 . .
+} b31;
+b32 {
+b32 ::= (and (fb0) (fb1)). . b40 b40 . .
+} b32;
+b33 {
+b33 ::= (and (fb0) (fb1)). . b41 b41 . .
+} b33;
+b34 {
+b34 ::= (and (fb0) (fb1)). . b42 b42 . .
+} b34;
+b35 {
+b35 ::= (and (fb0) (fb1)). . b43 b43 . .
+} b35;
+b36 {
+b36 ::= (and (fb0) (fb1)). . b44 b44 . .
+} b36;
+b37 {
+b37 ::= (and (fb0) (fb1)). . b45 b45 . .
+} b37;
+b38 {
+b38 ::= (and (fb0) (fb1)). . b46 b46 . .
+} b38;
+b39 {
+b39 ::= (and (fb0) (fb1)). . b47 b47 . .
+} b39;
+b40 {
+b40 ::= (<= (fz0) (fz1)). a8 a8 . . .
+b40 ::= (>= (fz0) (fz1)). a8 a8 . . .
+} b40;
+b41 {
+b41 ::= (<= (fz0) (fz1)). a9 a9 . . .
+b41 ::= (>= (fz0) (fz1)). a9 a9 . . .
+} b41;
+b42 {
+b42 ::= (<= (fz0) (fz1)). a10 a10 . . .
+b42 ::= (>= (fz0) (fz1)). a10 a10 . . .
+} b42;
+b43 {
+b43 ::= (<= (fz0) (fz1)). a11 a11 . . .
+b43 ::= (>= (fz0) (fz1)). a11 a11 . . .
+} b43;
+b44 {
+b44 ::= (<= (fz0) (fz1)). a12 a12 . . .
+b44 ::= (>= (fz0) (fz1)). a12 a12 . . .
+} b44;
+b45 {
+b45 ::= (<= (fz0) (fz1)). a13 a13 . . .
+b45 ::= (>= (fz0) (fz1)). a13 a13 . . .
+} b45;
+b46 {
+b46 ::= (<= (fz0) (fz1)). a14 a14 . . .
+b46 ::= (>= (fz0) (fz1)). a14 a14 . . .
+} b46;
+b47 {
+b47 ::= (<= (fz0) (fz1)). a15 a15 . . .
+b47 ::= (>= (fz0) (fz1)). a15 a15 . . .
+} b47;
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x1 x0) (>= x0 x2)) (and (>= x0 x0) (>= x2 x2)))
+fb1: (or (and (>= x2 x2) (<= x1 x2)) (and (<= x2 x2) (>= x1 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 33.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x0 x0) (>= x2 x2)) (and (>= x1 x0) (<= x2 x1)))
+fb1: (or (and (>= x1 x2) (<= x0 x2)) (and (>= x2 x1) (<= x0 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 40.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x0) (>= x2 x1)) (and (>= x2 x2) (>= x0 x1)))
+fb1: (or (and (>= x2 x0) (<= x2 x1)) (and (<= x1 x0) (>= x2 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 29.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x0) (>= x2 x1)) (and (>= x1 x1) (<= x0 x1)))
+fb1: (or (and (>= x1 x1) (>= x2 x0)) (and (>= x1 x0) (>= x0 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 46.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x2 x0) (>= x0 x1)) (and (<= x0 x2) (<= x2 x2)))
+fb1: (or (and (<= x1 x0) (<= x1 x0)) (and (<= x1 x1) (<= x2 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 84.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x2) (>= x2 x0)) (and (>= x0 x0) (>= x2 x2)))
+fb1: (or (and (>= x0 x1) (<= x0 x1)) (and (>= x0 x1) (>= x1 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 27.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x2) (<= x2 x1)) (and (>= x1 x1) (>= x2 x1)))
+fb1: (or (and (<= x0 x0) (<= x0 x0)) (and (>= x1 x2) (<= x2 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 68.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x0 x1) (>= x2 x0)) (and (>= x0 x2) (<= x1 x2)))
+fb1: (or (and (>= x2 x1) (>= x2 x1)) (and (<= x0 x0) (>= x0 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 34.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x2) (<= x1 x0)) (and (>= x0 x1) (>= x2 x1)))
+fb1: (or (and (<= x0 x0) (<= x0 x2)) (and (>= x0 x1) (<= x2 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 40.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x2 x0) (>= x1 x2)) (and (<= x2 x2) (<= x2 x1)))
+fb1: (or (and (>= x2 x2) (>= x1 x1)) (and (<= x2 x1) (<= x1 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 49.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x1 x2) (>= x0 x1)) (and (<= x2 x1) (<= x1 x1)))
+fb1: (or (and (<= x0 x1) (<= x2 x0)) (and (>= x2 x2) (<= x1 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 27.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x2 x1) (>= x1 x2)) (and (>= x2 x2) (<= x2 x2)))
+fb1: (or (and (<= x0 x2) (>= x1 x2)) (and (<= x1 x1) (<= x0 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 43.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x2) (<= x2 x2)) (and (<= x0 x1) (>= x1 x1)))
+fb1: (or (and (>= x2 x2) (>= x0 x0)) (and (>= x0 x0) (>= x2 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 58.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x1 x2) (<= x2 x0)) (and (>= x0 x0) (>= x0 x2)))
+fb1: (or (and (<= x0 x2) (<= x1 x1)) (and (<= x1 x0) (<= x2 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 10.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x2 x0) (<= x1 x0)) (and (<= x0 x2) (>= x1 x0)))
+fb1: (or (and (>= x0 x0) (>= x1 x1)) (and (<= x2 x1) (<= x0 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 81.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x1) (>= x0 x2)) (and (>= x0 x1) (<= x2 x1)))
+fb1: (or (and (>= x0 x0) (<= x1 x1)) (and (>= x2 x2) (>= x0 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 32.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x1 x2) (>= x2 x0)) (and (>= x2 x0) (>= x2 x2)))
+fb1: (or (and (>= x2 x0) (>= x0 x0)) (and (<= x0 x1) (<= x1 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 83.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x1 x1) (>= x1 x2)) (and (>= x1 x0) (<= x0 x1)))
+fb1: (or (and (<= x0 x0) (<= x1 x1)) (and (>= x0 x0) (>= x0 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 72.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x1 x1) (>= x2 x1)) (and (>= x2 x2) (<= x2 x1)))
+fb1: (or (and (<= x0 x1) (<= x0 x1)) (and (<= x0 x2) (<= x1 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 36.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x1 x1) (<= x1 x0)) (and (<= x1 x2) (<= x0 x1)))
+fb1: (or (and (>= x0 x0) (>= x1 x0)) (and (<= x2 x1) (>= x0 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 33.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x0 x0) (<= x1 x2)) (and (>= x1 x2) (<= x0 x1)))
+fb1: (or (and (<= x2 x0) (<= x1 x2)) (and (<= x1 x1) (>= x0 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 49.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x1 x2) (<= x2 x2)) (and (<= x1 x0) (<= x0 x1)))
+fb1: (or (and (>= x2 x2) (<= x1 x1)) (and (>= x1 x0) (<= x1 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 44.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x2 x2) (<= x2 x0)) (and (<= x2 x0) (>= x1 x2)))
+fb1: (or (and (>= x2 x0) (>= x0 x2)) (and (>= x0 x1) (<= x0 x2)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 13.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x0 x1) (>= x0 x2)) (and (<= x1 x1) (<= x1 x2)))
+fb1: (or (and (<= x2 x0) (>= x0 x2)) (and (>= x2 x0) (<= x2 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 38.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x2 x0) (>= x2 x1)) (and (<= x0 x1) (<= x0 x0)))
+fb1: (or (and (>= x0 x1) (>= x1 x0)) (and (<= x2 x2) (>= x2 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 69.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x2 x0) (>= x2 x2)) (and (<= x1 x2) (<= x2 x2)))
+fb1: (or (and (>= x2 x2) (<= x2 x0)) (and (<= x2 x0) (>= x0 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 24.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x2 x0) (>= x0 x1)) (and (>= x2 x2) (<= x0 x1)))
+fb1: (or (and (<= x1 x0) (<= x2 x0)) (and (<= x0 x0) (<= x1 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 47.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x2 x1) (>= x1 x0)) (and (>= x1 x1) (>= x0 x0)))
+fb1: (or (and (<= x2 x2) (>= x1 x2)) (and (>= x0 x0) (<= x0 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 40.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x2 x0) (<= x0 x0)) (and (>= x0 x0) (>= x0 x0)))
+fb1: (or (and (<= x2 x0) (<= x0 x2)) (and (<= x2 x1) (>= x0 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 39.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x0 x0) (<= x0 x2)) (and (>= x0 x1) (<= x0 x0)))
+fb1: (or (and (>= x2 x2) (>= x0 x0)) (and (<= x2 x0) (<= x2 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 56.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (<= x1 x0) (<= x0 x1)) (and (>= x2 x1) (>= x1 x0)))
+fb1: (or (and (>= x2 x1) (>= x0 x1)) (and (<= x0 x2) (>= x2 x0)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 83.
+../stochpp/include/search/infr.hpp: 148. Proposal(31)
+fb0: (or (and (>= x2 x2) (>= x0 x1)) (and (>= x2 x0) (>= x1 x1)))
+fb1: (or (and (<= x2 x0) (>= x2 x2)) (and (<= x0 x1) (>= x2 x1)))
+../stochpp/include/search/infr.hpp: 150. Initial candidate(31) scores 52.
+../stochpp/include/search/sizefree.hpp: 47. Proceeding to expression size: 31
+../stochpp/include/search/sizeful.hpp: 80. 1/0
+../stochpp/include/search/sizeful.hpp: 88. 1/1
+../stochpp/include/search/sizeful.hpp: 80. 2/1
+../stochpp/include/search/sizeful.hpp: 88. 2/2
+../stochpp/include/search/sizeful.hpp: 80. 4/3
+../stochpp/include/search/sizeful.hpp: 88. 4/4
+../stochpp/include/search/sizeful.hpp: 88. 6/8
+../stochpp/include/search/sizeful.hpp: 80. 8/10
+../stochpp/include/search/sizeful.hpp: 88. 10/16
+../stochpp/include/search/sizeful.hpp: 80. 16/21
+../stochpp/include/search/sizeful.hpp: 92. Iteration count reached. Exiting unsuccessfully.
