@@ -1,0 +1,2 @@
+feature.syntax=false
+feature.semantic=false
