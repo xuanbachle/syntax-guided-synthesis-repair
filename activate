@@ -39,8 +39,8 @@ export LOCAL_PERL_ROOT="$ANGELIX_ROOT/build/perl"
 
 
 export SYNTHESIS_OTHER_JAR="/syntax-guided-synthesis-repair/af2sygus.jar"
-export ENUM_SOLVER_PATH="/sygus-comp14/solvers/enumerative/esolver-synth-lib/bin/opt/esolver-synthlib"
-export CVC4_SOLVER_PATH="/sygus-comp14/CVC4/cvc4"
+export ENUM_SOLVER_PATH="/syntax-guided-synthesis-repair/esolver-synthlib"
+export CVC4_SOLVER_PATH="/syntax-guided-synthesis-repair/sygus-comp14/CVC4/cvc4"
 export RESULT_BEAUTIFIER_PATH="/syntax-guided-synthesis-repair/sygusResult/parseResult.py"
 # envorinment for building and execution:
 
